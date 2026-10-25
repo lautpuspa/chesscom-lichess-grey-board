@@ -21,6 +21,8 @@ This disables extension signature checks for that browser profile, so install
 only add-ons you trust. Standard Firefox does not support this setting.
 See [Mozilla's signing guide](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox).
 
+Or just tell your agents to install this shi lol.
+
 ## Standard Firefox: install permanently with Stylus
 
 1. Install [Stylus for Firefox](https://addons.mozilla.org/firefox/addon/styl-us/).
