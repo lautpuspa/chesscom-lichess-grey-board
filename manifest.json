@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Lichess Grey Board for Chess.com",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The original Lichess grey board texture on Chess.com. Keeps your pieces and game controls.",
   "browser_specific_settings": {
     "gecko": {
@@ -24,7 +24,8 @@
         "board.css"
       ],
       "css_origin": "user",
-      "run_at": "document_start"
+      "run_at": "document_start",
+      "all_frames": true
     }
   ]
 }

@@ -1,7 +1,8 @@
 # Lichess Grey Board for Chess.com
 
 The original textured grey Lichess board on Chess.com. Keeps your existing pieces,
-move highlights, controls, board size, and animations.
+move highlights, controls, board size, and animations. The Firefox extension also
+applies inside Chess.com frames and shows a neutral grey while the texture loads.
 
 ![Board preview](preview.png)
 
