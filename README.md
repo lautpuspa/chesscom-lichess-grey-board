@@ -34,9 +34,9 @@ The style applies only to `chess.com`. Use one installation method at a time.
 
 ## Temporary extension installation
 
-Download `lichess-grey-board-firefox.zip` from [Releases](https://github.com/lautpuspa/chesscom-lichess-grey-board/releases/latest).
+Download the Firefox `.xpi` or `.zip` from [Releases](https://github.com/lautpuspa/chesscom-lichess-grey-board/releases/latest).
 Open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**,
-and select the ZIP or this repository's `manifest.json`. Refresh Chess.com.
+and select the archive or this repository's `manifest.json`. Refresh Chess.com.
 
 Requires Firefox 142 or newer. Firefox removes temporary add-ons on exit.
 For persistent installation, use Developer Edition or the Stylus method above.
