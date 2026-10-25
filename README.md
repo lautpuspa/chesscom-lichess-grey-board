@@ -1,7 +1,8 @@
 # Lichess Grey Board for Chess.com
 
-The original textured grey Lichess board on Chess.com. Keeps your existing pieces,
-move highlights, controls, board size, and animations. The Firefox extension also
+The original textured grey Lichess board on Chess.com, with Lichess last-move
+colours, green move dots, and capture rings. Keeps your existing pieces,
+controls, board size, and animations. The Firefox extension also
 applies inside Chess.com frames and shows a neutral grey while the texture loads.
 
 ![Board preview](preview.png)
@@ -35,6 +36,14 @@ Or just tell your agents to install this shi lol.
 
 The style applies only to `chess.com`. Use one installation method at a time.
 
+## Highlight limits
+
+Chess.com gives selected squares and last moves the same yellow marker and no
+separate CSS class. Both use Lichess's yellow-green last-move colour here; the
+separate dark green selected-square colour cannot be matched reliably with CSS
+alone. Custom coloured annotations keep their original colours. If you disable
+move hints or last-move highlights in Chess.com, the skin does not enable them.
+
 ## Temporary extension installation
 
 Download the Firefox `.xpi` or `.zip` from [Releases](https://github.com/lautpuspa/chesscom-lichess-grey-board/releases/latest).
@@ -52,7 +61,9 @@ there are no image requests. Site access is restricted to Chess.com.
 
 Verified in an isolated Firefox 158 profile: installation, reload, original piece
 images and board dimensions, native e2–e4 on the analysis board, narrow viewport,
-and uninstall restoring the original background. `web-ext lint` reports no
+and uninstall restoring the original background. Move colours, legal dots,
+capture rings, and native coloured annotations were also checked in Firefox.
+`web-ext lint` reports no
 errors, notices, or warnings. Live rated games and every Chess.com board mode
 were not exercised. Site markup changes may require a CSS update.
 
@@ -60,7 +71,10 @@ were not exercised. Site markup changes may require a CSS update.
 
 AGPL-3.0-or-later. Texture copyright the lila authors and pirouetti.
 The original [`grey.jpg`](https://github.com/lichess-org/lila/blob/7ee0938942be063ca0b70084e70108bd1bea661a/public/images/board/grey.jpg)
-bytes are embedded unchanged in `board.css` and the UserCSS style. See
+bytes are embedded unchanged in `board.css` and the UserCSS style. Highlight
+colours and gradients come from Lichess's
+[`_chessground.scss`](https://github.com/lichess-org/lila/blob/7ee0938942be063ca0b70084e70108bd1bea661a/ui/lib/css/theme/board/_chessground.scss).
+See
 [LICENSE](LICENSE) and [Lichess's attribution record](LICHESS-COPYING.md).
 
 Unofficial customization; not affiliated with Chess.com or Lichess.

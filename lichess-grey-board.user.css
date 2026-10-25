@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Lichess Grey Board for Chess.com
 @namespace      local.chess-board
-@version        1.0.2
-@description    Original Lichess grey board texture; keeps your pieces and controls.
+@version        1.0.3
+@description    Lichess grey board, last-move colours, and green move dots.
 @author         Local customization; texture by the lila authors and pirouetti
 @license        AGPL-3.0-or-later
 ==/UserStyle== */
@@ -11,7 +11,7 @@
  * Copyright the lila authors and pirouetti. AGPL-3.0-or-later.
  * Source: https://github.com/lichess-org/lila/blob/7ee0938942be063ca0b70084e70108bd1bea661a/public/images/board/grey.jpg
  * Texture SHA-256: 7f4c6dacb45743ca89e7a01d988f3f56ca82ae8da92c0ffecbd2a9c68f3ec6bc
- * Only the board surface and its coordinate labels change.
+ * Only the board surface, coordinate labels, and native highlights change.
  */
 :is(wc-chess-board, chess-board) {
   background-color: #999 !important;
@@ -27,5 +27,26 @@
 
 :is(wc-chess-board, chess-board) .coordinates .coordinate-dark {
   fill: #ccc !important;
+}
+
+/* Lichess highlight colours and gradients, from lila ui/lib/css/theme/board/_chessground.scss. */
+:is(wc-chess-board, chess-board) .highlight[style*="rgb(255, 255, 51)"] {
+  background-color: rgb(155 199 0 / 0.41) !important;
+  opacity: 1 !important;
+}
+
+:is(wc-chess-board, chess-board) :is(.hint, .capture-hint) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background-clip: border-box !important;
+}
+
+:is(wc-chess-board, chess-board) .hint {
+  background: radial-gradient(rgb(20 85 30 / 0.5) 19%, transparent 20%) !important;
+}
+
+:is(wc-chess-board, chess-board) .capture-hint {
+  background: radial-gradient(transparent 0%, transparent 79%, rgb(20 85 0 / 0.3) 80%) !important;
 }
 }
