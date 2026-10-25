@@ -5,7 +5,23 @@ move highlights, controls, board size, and animations.
 
 ![Board preview](preview.png)
 
-## Install permanently with Stylus
+## Firefox Developer Edition: for people who like to tinker
+
+If you're the hacky, tweak-everything type, [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
+is a much better fit for this kind of customization. It is built for developers
+and lets you keep unsigned local extensions installed across restarts.
+
+1. In **Firefox Developer Edition**, open `about:config`.
+2. Set `xpinstall.signatures.required` to `false`.
+3. Download `lichess-grey-board-firefox.xpi` from [Releases](https://github.com/lautpuspa/chesscom-lichess-grey-board/releases/latest).
+4. Open `about:addons` → gear menu → **Install Add-on From File…**, and select the XPI.
+5. Refresh Chess.com. The skin stays installed when you restart the browser.
+
+This disables extension signature checks for that browser profile, so install
+only add-ons you trust. Standard Firefox does not support this setting.
+See [Mozilla's signing guide](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox).
+
+## Standard Firefox: install permanently with Stylus
 
 1. Install [Stylus for Firefox](https://addons.mozilla.org/firefox/addon/styl-us/).
 2. Open [the UserCSS style](https://raw.githubusercontent.com/lautpuspa/chesscom-lichess-grey-board/main/lichess-grey-board.user.css).
@@ -16,14 +32,14 @@ move highlights, controls, board size, and animations.
 
 The style applies only to `chess.com`. Use one installation method at a time.
 
-## Firefox extension
+## Temporary extension installation
 
 Download `lichess-grey-board-firefox.zip` from [Releases](https://github.com/lautpuspa/chesscom-lichess-grey-board/releases/latest).
 Open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**,
 and select the ZIP or this repository's `manifest.json`. Refresh Chess.com.
 
-Requires Firefox 142 or newer. This is an unsigned development extension;
-Firefox removes temporary add-ons on exit. Use Stylus for persistent installation.
+Requires Firefox 142 or newer. Firefox removes temporary add-ons on exit.
+For persistent installation, use Developer Edition or the Stylus method above.
 
 ## What runs
 
